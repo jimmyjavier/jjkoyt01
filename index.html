@@ -29,24 +29,23 @@
                 </div>
             </div>
         </div>
-        <!--ko if: aceptasTerminosCondiciones-->
-        <div class="row">
+        
+        <div class="row" data-bind="if: aceptasTerminosCondiciones">
             <div class="col">
                 <div class="alert alert-success">
                     <h1> En hora buena <strong data-bind="text: nombre"></strong>, haz clic en el botón continuar para acceder a nuestro sitio.</h1>
                 </div>                
             </div>
         </div>
-        <!--/ko-->
-        <!--ko ifnot: aceptasTerminosCondiciones-->
-        <div class="row">
+                
+        <div class="row" data-bind="if: !aceptasTerminosCondiciones()">
             <div class="col">
                 <div class="alert alert-warning">
                     <h4>Es necesario aceptar los términos y condiciones para poder continuar...</h4>
                 </div>                
             </div>
         </div>
-        <!--/ko-->
+        
     </div>
 
     <script type="text/javascript" src="js/jquery.slim.min.js"></script>
